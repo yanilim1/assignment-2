@@ -50,6 +50,7 @@ def relationship_status(from_member, to_member, social_graph):
     else:
       return "no relationship"
       
+      
 def tic_tac_toe(board):
   '''
   Item 2.
@@ -127,7 +128,7 @@ def tic_tac_toe(board):
       return sign
 
   return "NO WINNER"
-
+  
 def eta(first_stop, second_stop, route_map):
   '''
   Item 3.
@@ -169,7 +170,7 @@ def eta(first_stop, second_stop, route_map):
         time += route_map[loc]['travel_time_mins']
         break
   return time
-
+  
 social_graph = {
     "@bongolpoc":{"first_name":"Joselito",
                   "last_name":"Olpoc",
@@ -212,6 +213,7 @@ print(relationship_status("@eeebeee","@jobenilagan",social_graph)) #friends
 print(relationship_status("@chums","@bongolpoc",social_graph)) #followed by
 print(relationship_status("@bongolpoc","@chums",social_graph)) #follower
 print(relationship_status("@bongolpoc","@eeebeee",social_graph)) #no relationship
+
 
 board1 = [
 ['X','X','O'],
