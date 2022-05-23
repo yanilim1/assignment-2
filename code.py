@@ -44,9 +44,9 @@ def relationship_status(from_member, to_member, social_graph):
       if to_member in social_graph[from_member]['following']:
         return "friends"
       else:
-        return "follower"
+        return "followed by"
     elif to_member in social_graph[from_member]['following']:
-      return "followed by"
+      return "follower"
     else:
       return "no relationship"
   def tic_tac_toe(board):
@@ -158,16 +158,10 @@ def eta(first_stop, second_stop, route_map):
       the time it will take the shuttle to travel from first_stop to second_stop
   '''
   # Write your code below this line
-  time = 0
-  loc_ptr = first_stop
-  while loc_ptr != second_stop:
-    for loc in route_map.keys():
-      if loc_ptr == loc[0]:
-        loc_ptr = loc[1]
-        print(loc_ptr)
-        time += route_map[loc]['travel_time_mins']
-        break
-  return time
+  for loc in route_map.keys():
+    if loc[0] == first_stop:
+        if loc[1] == secondstop:
+            return route_map[loc]['travel_time_mins']
 
 social_graph = {
     "@bongolpoc":{"first_name":"Joselito",
